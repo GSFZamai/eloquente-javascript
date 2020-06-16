@@ -31,13 +31,13 @@ E o vocabulário que _está_ disponível tende a ser mais precisamente definido,
 e um tanto menos flexivel, que na linguagem humana. Portanto, nós normalmente
 _temos_ que introduzir novos conteiso para evitar sermos repetitivos.
 
-## Defining a function
+## Definindo uma função
 
 {{index "square example", [function, definition], [binding, definition]}}
 
-A function definition is a regular binding where the value of the
-binding is a function. For example, this code defines `square` to
-refer to a function that produces the square of a given number:
+Uma definição de função é uma ligação comum onde o valor da ligração
+é uma função. Por exemplo, esse código define `square` para se referir à uma
+função que produz o quadrado de um dado número:
 
 ```
 const square = function(x) {
@@ -51,18 +51,17 @@ console.log(square(12));
 {{indexsee "curly braces", braces}}
 {{index [braces, "function body"], block, [syntax, function], "function keyword", [function, body], [function, "as value"], [parentheses, arguments]}}
 
-A function is created with an expression that starts with the keyword
-`function`. Functions have a set of _((parameter))s_ (in this case,
-only `x`) and a _body_, which contains the statements that are to be
-executed when the function is called. The function body of a function
-created this way must always be wrapped in braces, even when it
-consists of only a single ((statement)).
+Uma função é criada com uma expressão que se inicia com a palavra-chave
+`function`. Funções possuem um conjunto de _((parâmetro))s_ (nesse caso,
+apenas `x`) e um _corpo_, que contém as declarações que serão executadas quando a função
+for chamada. O corpo da função de uma função criada dessa forma deve sempre ser
+encapsulada entre chaves, mesmo quando ela consistir de uma única ((declaração)).
 
 {{index "power example"}}
 
-A function can have multiple parameters or no parameters at all. In
-the following example, `makeNoise` does not list any parameter names,
-whereas `power` lists two:
+Uma função pode ter múltiplos parâmetros ou nenhum parâmetro ao todo. No exemplo a seguir,
+`makeNoise` não lista nenhum nome de parâmetro,
+enquanto que `power` lista dois:
 
 ```
 const makeNoise = function() {
@@ -86,21 +85,18 @@ console.log(power(2, 10));
 
 {{index "return value", "return keyword", undefined}}
 
-Some functions produce a value, such as `power` and `square`, and some
-don't, such as `makeNoise`, whose only result is a ((side effect)). A
-`return` statement determines the value the function returns. When
-control comes across such a statement, it immediately jumps out of the
-current function and gives the returned value to the code that called
-the function. A `return` keyword without an expression after it will
-cause the function to return `undefined`. Functions that don't have a
-`return` statement at all, such as `makeNoise`, similarly return
-`undefined`.
+Algumas funções produzem um valor, assim como `power` e `square`, e algumas
+não, assim como `makeNoise`, a qual o único resultado é um ((efeito colateral)). Uma
+declaração `return` determina o valor que a função retornará. Quando
+o controle vem através tal declaração, ela imediatamente pula para fora da função atual
+e exibe o valor retornado para o código que chamou a função. A palavra-chave `return`
+sem uma expressão depois dela irá fazer com que a função retorne `undefined`. Funçõies que não
+possuem uma declaração `return`, assim como `makeNoise`, similarmente retorna `undefined`.
 
 {{index parameter, [function, application], [binding, "from parameter"]}}
 
-Parameters to a function behave like regular bindings, but their
-initial values are given by the _caller_ of the function, not the code
-in the function itself.
+Parâmetros para uma função se comportam como ligações comuns, mas seu valor inicial
+são dados pelo _chamador_ da função, não pelo código dentro da função.
 
 ## Bindings and scopes
 
