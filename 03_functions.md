@@ -1,37 +1,35 @@
-# Functions
+# Funções
 
 {{quote {author: "Donald Knuth", chapter: true}
 
-People think that computer science is the art of geniuses but the
-actual reality is the opposite, just many people doing things that
-build on each other, like a wall of mini stones.
+Pessoas acham que ciência da computação é a arte dos gênios mas a
+realidade atual é o oposto, apenas muitas pessoas fazendo coisas que
+constroem umas sobre as outras, como uma parede de mini pedras.
 
 quote}}
 
 {{index "Knuth, Donald"}}
 
-{{figure {url: "img/chapter_picture_3.jpg", alt: "Picture of fern leaves with a fractal shape", chapter: framed}}}
+{{figure {url: "img/chapter_picture_3.jpg", alt: "Imagem de folhas de samambaia com forma fractal", chapter: framed}}}
 
 {{index function, [code, "structure of"]}}
 
-Functions are the bread and butter of JavaScript programming. The
-concept of wrapping a piece of program in a value has many uses. It
-gives us a way to structure larger programs, to reduce repetition, to
-associate names with subprograms, and to isolate these subprograms
-from each other.
+Funções são o pão com manteiga da programação JavaScript. O conceito de
+encapsular uma peça de programa em um valor possui muitas utilizades. Isso
+nos dá uma forma de estruturar programas maiores, para reduzir repetição, para
+para assossiar nomes com subprogramas, e para isolar esses subprogramas uns dos outros.
 
-The most obvious application of functions is defining new
-((vocabulary)). Creating new words in prose is usually bad style. But
-in programming, it is indispensable.
+A aplicação mais óbvia de funções é definindo novo
+((vocabulário)). Criando novas palavras em prosa é normalmente um estilo ruim.
+Mas em programação, isso é indispensável.
 
 {{index abstraction, vocabulary}}
 
-Typical adult English speakers have some 20,000 words in their
-vocabulary. Few programming languages come with 20,000 commands built
-in. And the vocabulary that _is_ available tends to be more precisely
-defined, and thus less flexible, than in human language. Therefore, we
-usually _have_ to introduce new concepts to avoid repeating ourselves
-too much.
+Um típico adulto falante de Inglês possui umas 20,000 palavras em seu vocabulário.
+Algumas linguagens de programação vem com 20,000 comandos nativos
+E o vocabulário que _está_ disponível tende a ser mais precisamente definido,
+e um tanto menos flexivel, que na linguagem humana. Portanto, nós normalmente
+_temos_ que introduzir novos conteiso para evitar sermos repetitivos.
 
 ## Defining a function
 
