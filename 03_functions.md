@@ -98,35 +98,34 @@ possuem uma declaração `return`, assim como `makeNoise`, similarmente retorna 
 Parâmetros para uma função se comportam como ligações comuns, mas seu valor inicial
 são dados pelo _chamador_ da função, não pelo código dentro da função.
 
-## Bindings and scopes
+## Ligações e escopos
 
 {{indexsee "top-level scope", "global scope"}}
 {{index "var keyword", "global scope", [binding, global], [binding, "scope of"]}}
 
-Each binding has a _((scope))_, which is the part of the program
-in which the binding is visible. For bindings defined outside of any
-function or block, the scope is the whole program—you can refer to
-such bindings wherever you want. These are called _global_.
+Cada ligação possue um _((escopo)), que é a parte do programa a qual
+a ligação é visivel. Para ligações definidas fora de qualquer função ou bloco,
+o escopo é todo o programa-você pode referenciar tais funções onde você quiser. 
+Elas são chamadas _globais_.
 
 {{index "local scope", [binding, local]}}
 
-But bindings created for function ((parameter))s or declared inside a
-function can be referenced only in that function, so they are known as
-_local_ bindings. Every time the function is called, new instances of these
-bindings are created. This provides some isolation between
-functions—each function call acts in its own little world (its local
-environment) and can often be understood without knowing a lot about
-what's going on in the global environment.
+Mas ligações criadas para uma função ((parâmetro))s ou declaradas dentro de
+uma função pode ser referenciada apenas dentro daquela função, então ekas são
+conhecidas como ligações _locais_. Toda vez que a função é chamada, novas instâncias dessas
+ligações são criadas. Isso dá um tipo de isolamento entre as funções-cada função chama atos
+dentro de seu póprio mundinho (seu ambiente local) e pode frequentemente ser entendido sem
+ter muito conhecimento sobre o que está acontecendo no ambiente global.
 
 {{index "let keyword", "const keyword", "var keyword"}}
 
-Bindings declared with `let` and `const` are in fact local to the
-_((block))_ that they are declared in, so if you create one of those
-inside of a loop, the code before and after the loop cannot "see" it.
-In pre-2015 JavaScript, only functions created new scopes, so
-old-style bindings, created with the `var` keyword, are visible
-throughout the whole function that they appear in—or throughout the
-global scope, if they are not in a function.
+Ligações declaradas com `let` e `const` são de fato locais dentro do _((bloco))_
+aos quais são declarados, então se você criar um desses dentro de um loop, o código
+depois e antes do loop não poder ser "visto".
+No JavaScript pre-2015, apenas funções criavam novos escopos, então
+ligações ao estilo antigo, criadas com a palavra-chave `var`, através
+de toda função em que elas apareciam-ou através do escopo global, se elas não estivessem 
+dentro de uma função.
 
 ```
 let x = 10;
@@ -143,12 +142,11 @@ console.log(x + z);
 
 {{index [binding, visibility]}}
 
-Each ((scope)) can "look out" into the scope around it, so `x` is
-visible inside the block in the example. The exception is when
-multiple bindings have the same name—in that case, code can see only
-the innermost one. For example, when the code inside the `halve`
-function refers to `n`, it is seeing its _own_ `n`, not the global
-`n`.
+Cada ((escopo)) pode "procurar" dentro do escopo ao seu redor, então `x` é
+visivel dentro do bloco no exemplo. A exceção é quando
+multiplas ligações possuem o mesmo nome-nesse caso, código pode ver apenas
+a ligação mais interna. Por exemplo, quando o código dentro da função `halve`
+faz referenia a `n`, ele está vendo seu _próprio_ `n`, não o `n` global.
 
 ```
 const halve = function(n) {
